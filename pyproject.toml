@@ -1,12 +1,21 @@
-[project]
+[tool.poetry]
 name = "darien-gap"
 version = "0.0.1"
 description = "What can you find here?"
+authors = ["noonacedia <ruyearn@gmail.com>"]
+license = "Apache License, Version 2.0"
 readme = "README.md"
-requires-python = ">=3.13"
-dependencies = [
-    "alembic>=1.14.1",
-    "litestar[standart]>=2.14.0",
-    "psycopg[binary,pool]>=3.2.4",
-    "sqlalchemy>=2.0.37",
-]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+litestar = {extras = ["standart"], version = "^2.14.0"}
+psycopg = {extras = ["binary", "pool"], version = "^3.2.4"}
+sqlalchemy = "^2.0.37"
+alembic = "^1.14.1"
+uvicorn = {extras = ["standart"], version = "^0.34.0"}
+jinja2 = "^3.1.5"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
