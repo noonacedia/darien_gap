@@ -3,8 +3,8 @@ from litestar import Litestar, get
 
 @get("/")
 async def healthcheck() -> str:
-    healthcheck_status = 'its okay'
-    return healthcheck_status
+    status = "app is okay"
+    return status
 
 
 @get("/books/{book_id:int}")
