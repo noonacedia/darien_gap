@@ -3,7 +3,7 @@ from litestar import Litestar, get
 
 @get("/")
 async def index() -> str:
-    return "hello world"
+    return "index is working"
 
 
 @get("/books/{book_id:int}")
